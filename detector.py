@@ -11,7 +11,7 @@ address = ["94:7b:e7:7d:8e:66","ac:af:b9:45:78:0c","c0:d3:c0:b6:a3:5b","c0:11:73
 
 # Sleep once right when this script is called to give the Pi enough time
 # to connect to the network
-sleep(60)
+sleep(6)
 
 # Initialize the Initial State streamer
 # Be sure to add your unique access key
@@ -84,7 +84,7 @@ def whosHere(i):
             # disappeared from the network
             else:
                 counter[i] = counter[i] + 1
-                print(occupant[i] + "'s counter at " + str(counter[i]))
+                #print(occupant[i] + "'s counter at " + str(counter[i]))
                 sleep(30)
 
 
