@@ -4,10 +4,12 @@ from threading import Thread
 #from ISStreamer.Streamer import Streamer
 
 # Edit these for how many people/devices you want to track
-occupant = ["Paul","Clare","Niamh", "Murphy","Owen","Niamh's chromebook","Murphy's chromebook"]
+#occupant = ["Paul","Clare","Niamh", "Murphy","Owen","Niamh's chromebook","Murphy's chromebook"]
+occupant = ["Paul","Clare","Niamh", "Murphy","Owen"]
 
 # MAC addresses for our phones
-address = ["94:7b:e7:7d:8e:66","ac:af:b9:45:78:0c","c0:d3:c0:b6:a3:5b","c0:11:73:6c:70:27","44:6d:6c:c5:08:67","xx:xx:xx:xx:xx:xx","xx:xx:xx:xx:xx:xx"]
+#address = ["94:7b:e7:7d:8e:66","ac:af:b9:45:78:0c","c0:d3:c0:b6:a3:5b","c0:11:73:6c:70:27","44:6d:6c:c5:08:67","xx:xx:xx:xx:xx:xx","xx:xx:xx:xx:xx:xx"]
+address = ["94:7b:e7:7d:8e:66","ac:af:b9:45:78:0c","c0:d3:c0:b6:a3:5b","c0:11:73:6c:70:27","44:6d:6c:c5:08:67"]
 
 # Sleep once right when this script is called to give the Pi enough time
 # to connect to the network
@@ -47,7 +49,7 @@ def whosHere(i):
                 # Stream that device is present
                 #streamer.log(occupant[i],":office:")
                 #streamer.flush()
-                print(occupant[i] + " present streamed")
+                #print(occupant[i] + " present streamed")
                 # Reset counters so another stream isn't sent if the device
                 # is still present
                 firstRun[i] = 0
@@ -70,7 +72,7 @@ def whosHere(i):
                     # Stream that device is not present
                     #streamer.log(occupant[i],":no_entry_sign::office:")
                     #streamer.flush()
-                    print(occupant[i] + " not present streamed")
+                    #print(occupant[i] + " not present streamed")
                     # Reset counters so another stream isn't sent if the device
                     # is still present
                     notPresentSent[i] = 1
